@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo+2");
+
+* {
+  font-family: "Baloo 2", cursive;
+  color: #2078df;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  background-color: #1d1f20;
+}
+#homepage
+{
+    list-style: none;
+    font-size: 24px;
+    background-color: #001432;
+    border: antiquewhite solid 4px;
+    padding: 1vmin;
+    left: .5vmin;
+    right: .5vmin
+}
+
+main
+{
+    grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+    width: 40rem;
+    height: 40rem;
+}
+#board
+{
+    display: grid;
+    /* position: absolute; */
+    background-color: rgb(47, 47, 47);
+}
+
+.cell
+{
+    border: 0.5px solid #2188ff;
+    
+}
+
+.cell.apple
+{
+    background-color: red;
+    border-radius: 50%;
+}
+
+.cell.snake
+{
+    background-color: greenyellow;
+}
+
+button
+{
+    display: grid;
+    border-radius: 0.2rem;
+    padding-top: 1.5vmin;
+    padding-bottom: 1.5vmin;
+    padding-left: 2vmin;
+    padding-right: 2vmin;
+    border: solid 3px #eb0000;
+    background-color: #edca7f;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.start-game
+{
+    display: flex;
+    align-items: center;
+    top: 0;
+}
+#controls {
+    display: none;
+    grid-template: repeat(3, 1fr)/repeat(3,1fr)
+}
+
+button.up {
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+button.down {
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+
+button.right {
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+button.left {
+    grid-row: 2/3;
+    grid-column:1/2;
+}
+
+#score 
+{
+    display: none;
+    background-color: rgb(255, 148, 148);
+    padding-left: 2.5vmin;
+    padding-right: 2.5vmin;
+    padding-top: 1vmin;
+    padding-bottom: 1vmin;
+    flex-direction: center;
+    color: black;
+    font-size: 4vmin;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}

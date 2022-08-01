@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+:root {
+    --cell-size: 25vmin;
+    --mark-size: calc(var(--cell-size) * .9);
+}
+#playerAmount {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2D080A;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+    border: solid 1rem black;
+}
+#startScreen {
+    font-size: 2.5rem;
+    color: #FFCDBC;
+}
+#onePlayer {
+    background-color: seagreen;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+#twoPlayer {
+    background-color: darkcyan;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+#playerNameStart {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #7C3626;
+    justify-content: center;
+    align-items: center;
+    color: bisque;
+    font-size: 3rem;
+    flex-direction: column;
+}
+label {
+    padding: 2vmin;
+    background-color: darkcyan;
+    border: solid 1rem rgb(50, 176, 105);
+}
+#playerX {
+    font-size: 1rem;
+    padding: 12px;
+    border: solid .5rem rgb(0, 0, 0);
+    text-align: center;
+}
+#playerO {
+    display: none;
+    font-size: 1rem;
+    padding: 12px;
+    border: solid .5rem rgb(0, 0, 0);
+    text-align: center;
+}
+#playerOLabel {
+    display: none;
+    background-color:rgb(13, 68, 102);
+}
+#startGame {
+    background-color: seagreen;
+    font-size: 2rem;
+    border: solid .5rem black;
+    cursor: pointer;
+}
+.board {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+}
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+.cell:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.cell:nth-child(3n + 3) {
+    border-right: none;
+}
+
+.cell:nth-child(n + 7) {
+    border-bottom: none;
+}
+
+.cell.x,
+.cell.circle {
+    cursor: not-allowed;
+}
+
+img {
+    width: var(--mark-size);
+    height: var(--mark-size);
+}
+.youWin {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+    text-align: center;
+}
+.youWin button {
+    font-size: 2rem;
+    background-color: white;
+    border: .25em solid black;
+    padding: .5em;
+    cursor: pointer;
+    align-items: center;
+}
+
+.youWin button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+.youWin.show {
+    display: flex;
+}
+#homePage
+{
+  background-color: seagreen;
+  display: flex;
+  list-style: none;
+  padding: .25vmin;
+  font-size: 2vmin;
+  border: solid 1vmin black;
+}

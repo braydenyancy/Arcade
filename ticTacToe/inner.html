@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+    <form id="playerAmount">
+        <nav>
+            <li id="homePage">
+                <a href="../index.html"><h2>Back To Arcade</h2></a>
+            </li>
+        </nav>
+        <h1 id="startScreen">TIC TAC TOE DEATH BATTLE!!!</h1>
+        <input type="button" id="onePlayer" value="One Player"><br>
+        <input type="button" id="twoPlayer" value="Two Player"><br>
+    </form><br><br>
+    <form id="playerNameStart">
+        <label for="playerX">1P</label><br>
+        <input type="text" id="playerX" name="playerXName" placeholder="Player Name"><br>
+        <label id='playerOLabel' for="playerO">2P</label><br>
+        <input type="text" class='playerO' id="playerO" name="playerOName" placeholder="Player Name"><br>
+        <button id="startGame">Start Game</button>
+    </form>
+    <div id="cpu"></div>
+    <div class="board" id="board">
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell=></div>
+        <div class="cell" data-cell=></div>
+        <div class="cell" data-cell=></div>
+        <div class="cell" data-cell=></div>
+    </div>
+    <div class="youWin" id="you-win">
+        <div data-win-message-text></div>
+        <button id="playAgain">Restart Match</button>
+        <button id="restartButton">Back To Menu</button>
+    </div>
+</body>
+</html>
