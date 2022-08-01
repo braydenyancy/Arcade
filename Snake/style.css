@@ -12,6 +12,9 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #1d1f20;
+  position: absolute;
+  left: 25%;
+  right: 25%;
 }
 #homepage
 {
@@ -23,17 +26,16 @@ body {
     left: .5vmin;
     right: .5vmin
 }
-
 main
 {
     grid-template: repeat(12, 1fr) / repeat(12, 1fr);
-    width: 40rem;
-    height: 40rem;
+    width: 40vmin;
+    height: 40vmin;
+    position: relative;
 }
 #board
 {
     display: grid;
-    /* position: absolute; */
     background-color: rgb(47, 47, 47);
 }
 
@@ -99,7 +101,7 @@ button.left {
 
 #score 
 {
-    display: none;
+    display: flex;
     background-color: rgb(255, 148, 148);
     padding-left: 2.5vmin;
     padding-right: 2.5vmin;

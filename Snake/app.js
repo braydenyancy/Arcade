@@ -15,18 +15,18 @@ Requirements
 - Stop game if snake collides with wall or self
 - Keep track of the game controls
 - Potential Functions:
-    - Adds length to the snakes body when an apple eaten
-    - Handles the Game controls
-        - turning the snake
-        - moving body accordingly
-    - Random placement of the apple
-    - When the game is over
-    - Reset the game
-    Directions:
-    - Add Score COunter To HTML
-    - Keep Score & Update Score in JS
-    - Update Score IN HTML
-    - Display Final Score when Game isOver
+- Adds length to the snakes body when an apple eaten
+- Handles the Game controls
+- turning the snake
+- moving body accordingly
+- Random placement of the apple
+- When the game is over
+- Reset the game
+Directions:
+- Add Score COunter To HTML
+- Keep Score & Update Score in JS
+- Update Score IN HTML
+- Display Final Score when Game isOver
 */
 
 //GAME PHASES
@@ -44,6 +44,8 @@ const DOWN = "DOWN"
 let gameState = {}
 
 restartButton.addEventListener('click', event => {
+    gameControls.style.display = "none"
+    startButton.style.display = "flex"
     event.preventDefault()
     resetInitialState()
     updateHTMLBoard()
@@ -224,6 +226,7 @@ startButton.addEventListener("click", function () {
 
     changePhaseTo(PLAYING)
 
+    startButton.style.display = "none"
     gameControls.style.display = "grid"
     score.style.display = "flex"
 
